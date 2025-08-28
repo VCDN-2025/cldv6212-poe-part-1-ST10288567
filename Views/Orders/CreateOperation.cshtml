@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Create Queue Operation";
+}
+<h1>Create Queue Operation</h1>
+<form asp-action="CreateOperation" method="post">
+    <div class="form-group">
+        <label>Operation Type</label>
+        <input type="text" name="operationType" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Target Name</label>
+        <input type="text" name="targetName" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Send to Queue</button>
+</form>

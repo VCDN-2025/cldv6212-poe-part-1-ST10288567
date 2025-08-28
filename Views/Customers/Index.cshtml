@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AbcRetailStorage_st10288567.Models.CustomerEntity>
+@{
+    ViewData["Title"] = "Customers";
+}
+<h1>Customers</h1>
+<p><a asp-action="Create" class="btn btn-primary">Add Customer</a></p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.FullName</td>
+                <td>@c.Email</td>
+                <td>@c.Phone</td>
+                <td>@c.Address</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@c.RowKey">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@c.RowKey">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@c.RowKey">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

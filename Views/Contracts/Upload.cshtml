@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Upload Contract";
+}
+<h1>Upload Contract</h1>
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Contract File</label>
+        <input type="file" name="contractFile" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>

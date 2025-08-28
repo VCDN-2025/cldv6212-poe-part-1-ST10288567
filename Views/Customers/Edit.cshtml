@@ -1,0 +1,25 @@
+﻿@model AbcRetailStorage_st10288567.Models.CustomerEntity
+@{
+    ViewData["Title"] = "Edit Customer";
+}
+<h1>Edit Customer</h1>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="RowKey" />
+    <div class="form-group">
+        <label>Full Name</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Phone</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input asp-for="Address" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

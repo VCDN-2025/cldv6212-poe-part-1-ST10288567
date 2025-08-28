@@ -1,0 +1,15 @@
+﻿@model AbcRetailStorage_st10288567.Models.ProductEntity
+@{
+    ViewData["Title"] = "Product Details";
+}
+<h1>@Model.Name</h1>
+<p>@Model.Description</p>
+<p>Price: @Model.Price</p>
+<p>Stock: @Model.Stock</p>
+
+@if (!string.IsNullOrEmpty(ViewBag.ImageUrl))
+{
+    <img src="@ViewBag.ImageUrl" class="img-fluid" />
+}
+
+<p><a asp-action="Index" class="btn btn-secondary">Back to Products</a></p>

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Queue Messages";
+}
+<h1>Contracts</h1>
+<p><a asp-action="CreateOperation" class="btn btn-primary">Add Operation</a></p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var msg in Model)
+        {
+            <tr>
+                <td>@msg</td>
+            </tr>
+        }
+    </tbody>
+</table>
